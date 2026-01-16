@@ -12,12 +12,11 @@ jobs:
           ls -a
       - name: Checkout
         uses: actions/checkout@v1
-      - name: Simple JS Action
       - name: List Files after Checkout
         run: |
           pwd
           ls -a
-      - name: Checkout
+      - name: Simple JS Action
         uses: actions/hello-world-javascript-action@v1
         with:
           who-to-greet: Rushabh
