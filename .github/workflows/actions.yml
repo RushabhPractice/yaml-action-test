@@ -2,10 +2,11 @@ name: Actions Workflow
 
 on:
   push:
+    # branches-ignore:
+      # - delop/*
     branches:
       - master
-    branches-ignore:
-      - 'feature/*'
+      - feature
   # repository_dispatch:
   #   types: [build]
   # schedule:
