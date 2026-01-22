@@ -6,4 +6,6 @@ jobs:
     steps:
       - name: testing the steps
         run: echo " Hello Rushabh "
+      - name: testing Ls
+        run: ls
 
