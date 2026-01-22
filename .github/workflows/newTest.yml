@@ -8,4 +8,8 @@ jobs:
         run: echo " Hello Rushabh "
       - name: testing Ls
         run: ls
+      - uses: actions/checkout@v4
+      - name: Testing ls With action
+        run: ls
+
 
