@@ -1,41 +1,41 @@
-name: Actions Workflow
+# name: Actions Workflow
 
-on:
-  push:
-    # branches-ignore:
-      # - delop/*
-    branches:
-      - master
-      - feature
-  # repository_dispatch:
-  #   types: [build]
-  # schedule:
-  #   - cron: "0/5 * * * *"
-  # push:
-  # pull_request: 
-  #   types:
-  #     - closed
-  #     - opened
+# on:
+#   push:
+#     # branches-ignore:
+#       # - delop/*
+#     branches:
+#       - master
+#       - feature
+#   # repository_dispatch:
+#   #   types: [build]
+#   # schedule:
+#   #   - cron: "0/5 * * * *"
+#   # push:
+#   # pull_request: 
+#   #   types:
+#   #     - closed
+#   #     - opened
 
-jobs:
-  run-github-actions:
-    runs-on: ubuntu-latest
-    steps:
-      - name: List Files
-        run: |
-          pwd
-          ls -a
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: List Files after Checkout
-        run: |
-          pwd
-          ls -a
-      - name: Simple JS Action
-        uses: actions/hello-world-javascript-action@v1
-        with:
-          who-to-greet: Rushabh
-      - name: Log Greet Time
-        run: echo ${{steps.greet.outputs.time}}
+# jobs:
+#   run-github-actions:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: List Files
+#         run: |
+#           pwd
+#           ls -a
+#       - name: Checkout
+#         uses: actions/checkout@v1
+#       - name: List Files after Checkout
+#         run: |
+#           pwd
+#           ls -a
+#       - name: Simple JS Action
+#         uses: actions/hello-world-javascript-action@v1
+#         with:
+#           who-to-greet: Rushabh
+#       - name: Log Greet Time
+#         run: echo ${{steps.greet.outputs.time}}
 
   

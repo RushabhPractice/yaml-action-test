@@ -1,28 +1,28 @@
-name: Shell Command
+# name: Shell Command
 
-on: [push]
+# on: [push]
 
-jobs:
-  run-shell-commands:
-    runs-on: ubuntu-latest
-    steps:
-      - name: echo a string
-        run: echo "Hello World"
-      - name: "Multi Line Stript"
-        run: |
-          node -v
-          npm -v
-      - name: python Command
-        run: |
-          import platform
-          print(platform.processor())
-        shell: python
-  run-windows-commands:
-    runs-on: windows-latest
-    needs: [run-shell-commands]
-    steps:
-      - name: Directory
-        run: Get-Location
-      - name: Directory bash
-        run: pwd
-        shell: bash
+# jobs:
+#   run-shell-commands:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: echo a string
+#         run: echo "Hello World"
+#       - name: "Multi Line Stript"
+#         run: |
+#           node -v
+#           npm -v
+#       - name: python Command
+#         run: |
+#           import platform
+#           print(platform.processor())
+#         shell: python
+#   run-windows-commands:
+#     runs-on: windows-latest
+#     needs: [run-shell-commands]
+#     steps:
+#       - name: Directory
+#         run: Get-Location
+#       - name: Directory bash
+#         run: pwd
+#         shell: bash
